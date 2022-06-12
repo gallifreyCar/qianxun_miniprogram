@@ -1,0 +1,45 @@
+{
+  "pages":[
+ 
+    "pages/examiniation/examinitation",
+    "pages/status/status",
+    "pages/discover/discover",
+    "pages/my/my"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#2b6b4b",
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "迁寻智能叉车自检",
+    "navigationBarTextStyle":"black"
+
+  },
+  "tabBar":{
+    "list":[
+      {  "iconPath": "images/tijian.png",
+        "selectedIconPath": "images/tijian2.png",
+        "pagePath":"pages/examiniation/examinitation",
+        "text":"体检"
+      },
+      { 
+        "iconPath": "images/car.png",
+        "selectedIconPath": "images/car2.png",
+        "pagePath":"pages/status/status",
+        "text":"车况"
+      },
+      { 
+        "iconPath": "images/discover.png",
+        "selectedIconPath": "images/discover2.png",
+        "pagePath":"pages/discover/discover",
+        "text":"发现"
+      },
+      {
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my2.png",
+        "pagePath":"pages/my/my",
+        "text":"我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

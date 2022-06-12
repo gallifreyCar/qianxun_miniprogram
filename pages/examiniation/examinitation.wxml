@@ -1,0 +1,32 @@
+<!--pages/examiniation/examinitation.wxml-->
+<view style="background-color:coral;">
+  <view style="text-align: center; margin-bottom: 40rpx; ">
+    <text class="TJ_title" style="font-size: 80rpx; vertical-align: middle; font-weight: bold;">体检评分</text>
+  </view>
+  <progress  show-info="true" percent="{{percent}}" stroke-width="40rpx" border-radius="30rpx" style="margin: 30rpx 30rpx ;"></progress>
+  <view style="margin-left: 20rpx;">
+  上次体检时间：{{last_time}}
+  </view>
+</view>
+
+
+<view class="ExList" style="background-color: cornflowerblue;">
+  <view class="sub_title" wx:for="{{subTitleList}}" wx:key="id">
+    {{item.title}}
+  </view>
+</view>
+
+<view class="ExItem" style="background-color: rgb(183, 199, 212);">
+    <view class="ExSubItem">
+      <view  class="ExSubItem_item" wx:for="{{Ex_what}}" wx:key="id">{{item.title}}</view>
+    </view>
+    <view class="ExSubItem">
+      <view  class="ExSubItem_item" style="color: green;" wx:for="{{Ex_now}}" wx:key="id">{{item.title}}</view>
+    </view>
+    <view class="ExSubItem">
+      <view  class="ExSubItem_item" style="color: blue;" wx:for="{{Ex_normal}}" wx:key="id">{{item.title}}</view>
+    </view>
+  </view>
+
+<button type="primary" style="margin-top: 20rpx;">重新检测</button>
+<button type="primary" style="margin-top: 20rpx;">处理问题</button>
