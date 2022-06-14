@@ -13,6 +13,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "发现页面开发",
+          "pathName": "pages/discover/discover",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

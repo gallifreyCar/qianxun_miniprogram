@@ -1,17 +1,11 @@
-// pages/discover/discover.js
+// subDiscover/pages/falut_history/falut_history.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    discoverList:[
-        {id:1,title:"安全故障历史",name:"falut_history",image:"/images/history.png"},
-        {id:2,title:"故障趋势分析",name:"fault_analysis",image:"/images/analysis.png"},
-        {id:3,title:"安全历史事件",name:"history_history",image:"/images/history.png"},
-        {id:4,title:"车辆历史分析",name:"history_history",image:"/images/analysis.png"},
-        {id:5,title:"安全事件处理方案",name:"solution",image:"/images/solution.png"},
-    ]
+
   },
 
   /**

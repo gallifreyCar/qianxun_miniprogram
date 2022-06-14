@@ -40,5 +40,18 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "subPackages": [
+    {
+        "root": "subDiscover",
+        "pages": [
+            "pages/falut_history/falut_history",
+            "pages/fault_analysis/fault_analysis",
+            "pages/history_history/history_history",
+            "pages/history_analysis/history_analysis",
+            "pages/solution/solution"
+        ]
+    }
+
+  ]
 }

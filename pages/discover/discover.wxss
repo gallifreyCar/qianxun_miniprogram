@@ -1,1 +1,21 @@
 /* pages/discover/discover.wxss */
+.discoverView{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction:row;
+    align-items: center;
+    border-bottom: 6rpx solid #efefef;
+    height: 120rpx;
+   
+    
+}
+.discoverView image{
+    
+    height: 60rpx;
+    width: 60rpx;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+}
+.discoverView text{
+    align-items: center;
+}
