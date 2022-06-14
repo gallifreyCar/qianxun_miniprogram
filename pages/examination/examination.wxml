@@ -1,0 +1,17 @@
+<!--pages/examination/examination.wxml-->
+<!-- 进程条框 -->
+
+<view class="ProgressView">
+  <view class="score">当前得分</view>
+  <view class="score2">{{percentage}}</view>
+  <mpProgress class="mp" config="{{config}}" percentage="{{percentage}}"></mpProgress>
+</view>
+
+
+ <!-- 九宫格区域 -->
+<view class="grid-list">
+    <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
+        <image src="{{item.url}}"></image>
+        <text>{{item.name}}</text>
+    </navigator>
+</view>
