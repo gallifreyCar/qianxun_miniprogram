@@ -1,4 +1,6 @@
 // pages/examination/examination.js
+var app = getApp() //获取全局app实例
+
 
 Page({
 
@@ -6,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+
     percentage: 70,
     config: {
       canvasSize: {
@@ -18,14 +21,33 @@ Page({
       dotStyle: [{r: 20, fillStyle: '#ffffff', shadow: 'rgba(0,0,0,.15)'}, {r: 10, fillStyle: '#56B37F'}]
     },
     gridList:[
-        {url:"/images/check.png",name:"常规检测"},
-        {url:"/images/safe.png",name:"安全检测"},
-        {url:"/images/question-circle-fill.png",name:"故障检测"},
-        {url:"/images/car-info.png",name:"车况信息"},
-        {url:"/images/weizhang.png",name:"违章检测"},
-        {url:"/images/location.png",name:"车主定位"}
+        {id:1,url:"/images/check.png",name:"常规检测",goto:"normal_check/normal_check"},
+        {id:2,url:"/images/safe.png",name:"安全检测",goto:"safe_check/safe_check"},
+        {id:3,url:"/images/question-circle-fill.png",name:"故障检测",goto:"fault_check/fault_check"},
+        {id:4,url:"/images/car-info.png",name:"车况信息",goto:"car_info/car_info"},
+        {id:5,url:"/images/weizhang.png",name:"违章检测",goto:"violation_check/violation_check"},
+        {id:6,url:"/images/location.png",name:"车主定位",goto:"car_location/car_location"}
     ]
   },
+  //跳转方法
+  gotoSubEx:(e)=>{
+    if(!app.globalData.isLogin){
+      console.log(app.globalData.isLogin)
+      wx.showToast({
+        title: '请先登陆',
+        icon:"error",
+        duration:500
+      })
+    }else{
+      console.log(e.target.dataset.goto)
+      wx.navigateTo({
+        // url: `../../subExamination/${e.target.dataset.goto}`,
+        url:`../../subExamination/pages/${e.target.dataset.goto}`
+      })
+    }
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载

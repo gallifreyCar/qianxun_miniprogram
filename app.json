@@ -1,4 +1,6 @@
-{
+{ 
+
+  
   "pages": [
     "pages/status/status",
     "pages/discover/discover",
@@ -51,7 +53,16 @@
             "pages/history_analysis/history_analysis",
             "pages/solution/solution"
         ]
+    },{
+        "root": "subExamination",
+        "pages": [
+            "pages/normal_check/normal_check",
+            "pages/safe_check/safe_check",
+            "pages/fault_check/fault_check",
+            "pages/car_info/car_info",
+            "pages/violation_check/violation_check",
+            "pages/car_location/car_location"
+        ]
     }
-
   ]
 }

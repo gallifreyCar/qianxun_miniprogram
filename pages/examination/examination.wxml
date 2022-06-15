@@ -10,8 +10,8 @@
 
  <!-- 九宫格区域 -->
 <view class="grid-list">
-    <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
+    <view class="grid-item" wx:for="{{gridList}}" wx:key="id" bindtap="gotoSubEx" data-goto="{{item.goto}}">
         <image src="{{item.url}}"></image>
         <text>{{item.name}}</text>
-    </navigator>
+    </view>
 </view>

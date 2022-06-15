@@ -1,4 +1,5 @@
 // pages/my/my.js
+var app = getApp() //获取全局app实例
 Page({
  
 
@@ -13,7 +14,7 @@ Page({
       {id:4,title:"关于我们",name:"history_history",image:"/images/about.png"},
     ],
     userInfo: {},
-    NotLoginMe:true,
+    isLogin:false,
     flagA:true,
     flagB:true
   },
@@ -63,8 +64,10 @@ Page({
           wx.showToast({
             title: '登陆成功',
           })
+        
+          app.globalData.isLogin=true
           this.setData({
-            NotLoginMe:false
+            isLogin:app.globalData.isLogin
           })
         }else{
           wx.showToast({

@@ -1,4 +1,4 @@
-import MpProgress from "../progress.min.js";
+
 
 Component({
     options: {
