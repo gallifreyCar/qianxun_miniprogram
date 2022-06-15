@@ -1,2 +1,16 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+
+<view class="avatorView">
+    <block wx:if="{{NotLoginMe}}">
+        <button type="primary"  bindtap="loginMe" >登陆</button>
+    </block>
+    <block wx:else>
+        <image src="{{userInfo.avatarUrl}}"></image>
+        <text>{{userInfo.nickName}}</text>
+    </block>
+</view>
+
+<navigator class="discoverView"  wx:key="id" wx:for="{{myList}}" url="../../subDiscover/pages/{{item.name}}/{{item.name}}">
+<image src="{{item.image}}"></image>
+<text>{{item.title}}</text>
+</navigator>

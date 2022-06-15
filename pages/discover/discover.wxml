@@ -2,6 +2,4 @@
 <navigator class="discoverView"  wx:key="id" wx:for="{{discoverList}}" url="../../subDiscover/pages/{{item.name}}/{{item.name}}">
 <image src="{{item.image}}"></image>
 <text>{{item.title}}</text>
-
-
 </navigator>
